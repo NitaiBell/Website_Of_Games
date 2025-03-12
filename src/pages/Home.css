@@ -1,0 +1,10 @@
+.home {
+    width: 100% !important;
+    height: 100vh !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-color: rgb(0, 0, 255);
+    padding-top: 60px; /* Push content below the navbar */
+}
+
+

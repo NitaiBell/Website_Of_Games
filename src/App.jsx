@@ -1,13 +1,21 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Global Styles
+import "./App.css";
+
+
+// Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
+// Pages
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
-import SimonGamePage from "./pages/SimonPage";
-import MemoryGamePage from "./pages/MemoryPage";
-import TicTacToePage from "./pages/TicTacToePage";
-import WhackAMolePage from "./pages/WhackAMolePage";
-import "./App.css";  // Global styles
+import MemoryPage from "./pages/MemoryPage";
+import SimonPage from "./pages/SimonPage";
+import TicTacToePage from "./pages/Tic-tac-toePage";
+import WhackAMolePage from "./pages/Whack-a-molePage";
 
 function App() {
   return (
@@ -17,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/simon" element={<SimonGamePage />} />
-          <Route path="/memory" element={<MemoryGamePage />} />
+          <Route path="/memory" element={<MemoryPage />} />
+          <Route path="/simon" element={<SimonPage />} />
           <Route path="/tic-tac-toe" element={<TicTacToePage />} />
           <Route path="/whack-a-mole" element={<WhackAMolePage />} />
         </Routes>
