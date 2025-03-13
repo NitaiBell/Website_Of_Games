@@ -1,0 +1,45 @@
+.about {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(71, 3, 86), rgb(4, 116, 66), rgb(0, 0, 129));
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    
+    /* Flexbox for Centering Content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Text Styling */
+.about h1 {
+    color: white; /* White text */
+    font-size: 50px; /* Slightly larger font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px; /* Improves readability */
+}
+
+.about p {
+    color: rgb(255, 255, 255); /* White text */
+    font-size: 24px; /* Quite big */
+    max-width: 800px; /* Limit text width */
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about h1 {
+        font-size: 40px; /* Smaller text on small screens */
+    }
+    .about p {
+        font-size: 20px;
+    }
+}
+
+

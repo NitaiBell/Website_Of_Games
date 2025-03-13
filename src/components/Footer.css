@@ -1,0 +1,18 @@
+.footer {
+    width: 100%;
+    background-color: transparent; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 15px 0; /* Top and bottom padding */
+    position: fixed; /* Keeps footer at bottom */
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 14px;
+    }
+}

@@ -33,21 +33,21 @@
 /* ========== Navbar Links ========== */
 .nav-links {
     display: flex;
-    gap: 20px; /* Spaces out links */
+    gap: 10px; /* Spaces out links */
 }
 
 .nav-links a {
-    color: white; /* Ensure buttons or links are visible */
+    color: white; /* Default color */
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
     padding: 10px 15px;
-    transition: color 0.3s ease-in-out, transform 0.2s;
+    display: inline-block; /* Prevents shifting effect */
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
-    color: #ffcc00; /* Highlight effect on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: yellow; /* Highlight effect on hover */
 }
 
 /* ========== Responsive Design ========== */

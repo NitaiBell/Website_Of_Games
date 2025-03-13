@@ -1,6 +1,14 @@
+import React from "react";
+import "./Footer.css"; // Import the CSS file
+
 const Footer = () => {
-    return null; // Empty component for now
-  };
-  
+  return (
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} Website of Games. All rights reserved.</p>
+    </footer>
+  );
+};
+
 export default Footer;
+
   

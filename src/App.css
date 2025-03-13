@@ -1,15 +1,1 @@
-/* Reset default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Apply a universal font */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #9e5959;
-  color: #333;
-  line-height: 1.6;
-}
 

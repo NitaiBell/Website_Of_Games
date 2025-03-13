@@ -1,16 +1,16 @@
 import React from "react";
-import Navbar from "../components/Navbar"; // Import Navbar
-import Footer from "../components/Footer"; // Placeholder for Footer
-import "./Home.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "./Home.css"; // Ensure this is imported
 
 const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      {/* Content can go here if needed */}
-      <Footer /> {/* Placeholder for Footer, can be filled later */}
+      <Footer />
     </div>
   );
 };
 
 export default Home;
+
