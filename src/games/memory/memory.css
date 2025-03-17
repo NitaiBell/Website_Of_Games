@@ -1,0 +1,160 @@
+/* === Memory Page Styling === */
+.memory-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 188, 246), rgb(164, 204, 186), rgb(9, 34, 255));
+    padding: 20px;
+}
+
+/* === Memory Setup Styling === */
+.memory-setup {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading inside Memory Setup */
+.memory-setup h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Input Field for Choosing Pairs */
+.memory-setup input {
+    font-size: 18px;
+    padding: 8px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* Start Button */
+.memory-setup button {
+    display: block;
+    font-size: 18px;
+    background-color: #ff9933;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: background-color 0.3s;
+}
+
+.memory-setup button:hover {
+    background-color: #ff7f00;
+}
+
+/* === Memory Game Styling === */
+.memory-game {
+    text-align: center;
+}
+
+/* Grid for Memory Cards */
+.card-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Memory Card Styling */
+.memory-card {
+    width: 80px;
+    height: 80px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Inner Card for Flip Effect */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Flip Effect */
+.memory-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card Front & Back */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    backface-visibility: hidden;
+}
+
+/* Card Back */
+.card-back {
+    background: #444;
+    color: white;
+}
+
+/* Card Front */
+.card-front {
+    background: white;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+/* ✅ Matched Cards - Random Color (Handled via Inline Styles) */
+.memory-card.matched .card-front {
+    color: white; /* Keep text white, but background color is set dynamically in JSX */
+}
+
+/* Game Status Text */
+.game-status {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin: 15px 0;
+}
+
+/* Restart Button */
+.restart-button {
+    background-color: #ff9933;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+    background-color: #ff7f00;
+}
+
+/* Responsive Grid */
+@media screen and (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+

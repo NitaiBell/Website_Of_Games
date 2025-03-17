@@ -1,14 +1,20 @@
 import React from "react";
-import "../games/memory/memory.css"; // ✅ Correct path
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import MemoryGame from "../games/memory/MemoryGame";
+import "../games/memory/memory.css"; // Ensure this file exists for styling
 
-const MemoryGame = () => {
+const MemoryPage = () => {
   return (
-    <div className="memory-game">
-      <h1>Memory Game</h1>
-      <p>Match the pairs and test your memory skills!</p>
-      {/* Add game logic here */}
-    </div>
+    <>
+      <Navbar />
+      <div className="memory-page">
+        <MemoryGame />
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default MemoryGame;
+export default MemoryPage;
+

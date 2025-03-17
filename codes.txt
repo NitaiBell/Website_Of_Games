@@ -1,3 +1,5 @@
 tree src /F /A
 
 npm run dev
+
+tree public /F /A
