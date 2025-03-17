@@ -1,0 +1,126 @@
+/* === Limit Styles to Simon Page Only === */
+.simon-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(71, 3, 86), rgb(4, 116, 66), rgb(0, 0, 129));
+}
+
+/* === Center Game Container === */
+.simon-page .simon-game {
+    background-color: rgba(96, 96, 96, 0.5); /* ✅ Semi-transparent grey */
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    width: 400px;
+    text-align: center;  /* ✅ Ensures all text inside is centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ✅ Centers everything horizontally */
+    backdrop-filter: blur(10px); /* ✅ Softens the background slightly */
+}
+
+
+/* === Center Game Title === */
+.simon-page .game-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;  /* ✅ Ensures title is centered */
+}
+
+/* === Center Game Message === */
+.simon-page .game-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffd700;
+    text-align: center;  /* ✅ Ensures message is centered */
+}
+
+/* === Center Game Board === */
+.simon-page .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ✅ Centers buttons */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* === Center Button Row === */
+.simon-page .row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;  /* ✅ Ensures buttons are centered */
+}
+
+/* === Simon Buttons === */
+.simon-page .simon-button {
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* === Button Colors === */
+.simon-page .red { background-color: #ff4d4d; }
+.simon-page .blue { background-color: #4d79ff; }
+.simon-page .green { background-color: #4dff4d; }
+.simon-page .yellow { background-color: #ffd633; }
+
+/* === Button Flash Effect === */
+.simon-page .flash {
+    opacity: 0.6;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px white;
+    transition: all 0.2s ease-in-out;
+}
+
+/* === Disabled Buttons (User Turn Control) === */
+.simon-page .disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* === Start Button (Centered) === */
+.simon-page .start-button {
+    background-color: #ff9933;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: flex;
+    justify-content: center;  /* ✅ Ensures button text is centered */
+    align-items: center;
+}
+
+.simon-page .start-button:hover {
+    background-color: #ff7f00;
+}
+
+.simon-page .start-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* === Game Level Display (Centered) === */
+.simon-page .game-level {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;  /* ✅ Ensures level is centered */
+}
+
+

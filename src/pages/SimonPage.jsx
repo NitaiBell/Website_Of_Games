@@ -1,15 +1,22 @@
 import React from "react";
-import "../games/simon/simon.css"; 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import SimonGame from "../games/simon/SimonGame";
+import "../games/simon/simon.css"; // Import only for this page
 
-const SimonGame = () => {
+const SimonPage = () => {
   return (
-    <div className="simon-game">
-      <h1>Simon Game</h1>
-      <p>Repeat the pattern of colors to win!</p>
-      {/* Add game logic here */}
-    </div>
+    <>
+      <Navbar />
+      <div className="simon-page"> {/* New wrapper class */}
+        <SimonGame />
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default SimonGame;
+export default SimonPage;
+
+
 
