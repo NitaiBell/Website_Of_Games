@@ -1,0 +1,128 @@
+/* ✅ Styles the entire page */
+.whack-a-mole-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full screen height */
+    background: linear-gradient(45deg, rgb(246, 0, 0), rgb(164, 177, 204), rgb(9, 34, 255));
+    padding: 20px;
+}
+
+/* ✅ Game container */
+.whack-a-mole-game {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.5); /* Half-transparent grey */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ✅ Container for holes */
+.hole-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Dynamic grid */
+    max-width: 400px; /* Prevents stretching too much */
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+/* ✅ Styling for each hole */
+.hole {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+/* ✅ Hover effect */
+.hole:hover {
+    background-color: #333;
+}
+
+/* ✅ When the user clicks a hole */
+.hole:active {
+    transform: scale(0.9); /* Makes the hole slightly smaller when clicked */
+}
+
+/* ✅ Game over message */
+.game-over {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+/* ✅ Styling for Whack-a-Mole Setup */
+.setup {
+    text-align: center;
+    background-color: #545454;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    max-width: 400px;
+    width: 100%;
+}
+
+.setup h2 {
+    margin-bottom: 15px;
+}
+
+.setup label {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.setup input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.setup button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.setup button:hover {
+    background-color: #ffaa00;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+    .hole-container {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+
+    .hole {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+}
+
+

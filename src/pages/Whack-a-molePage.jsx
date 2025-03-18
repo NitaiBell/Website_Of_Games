@@ -1,14 +1,21 @@
 import React from "react";
-import "../games/whack-a-mole/whack-a-mole.css"; // ✅ Correct path
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import WhackAMoleGame from "../games/whack-a-mole/WhackAMoleGame";
+import "../games/whack-a-mole/whack-a-mole.css"; // Ensure this file exists for styling
 
-const WhackAMoleGame = () => {
+const WhackAMolePage = () => {
   return (
-    <div className="whack-a-mole-game">
-      <h1>Whack-A-Mole</h1>
-      <p>Hit as many moles as you can before time runs out!</p>
-      {/* Add game logic here */}
-    </div>
+    <>
+      <Navbar />
+      <div className="whack-a-mole-page">
+        <WhackAMoleGame />
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default WhackAMoleGame;
+export default WhackAMolePage;
+
+
