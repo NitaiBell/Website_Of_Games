@@ -1,14 +1,20 @@
 import React from "react";
-import "../games/tic-tac-toe/tic-tac-toe.css"; 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import TicTacToeGame from "../games/tic-tac-toe/TicTacToeGame";
+import "../games/tic-tac-toe/tic-tac-toe.css"; // Ensure styling is included
 
-const TicTacToeGame = () => {
+const TicTacToePage = () => {
   return (
-    <div className="tic-tac-toe-game">
-      <h1>Tic-Tac-Toe</h1>
-      <p>Challenge your opponent and win the game!</p>
-      {/* Add game logic here */}
-    </div>
+    <>
+      <Navbar />
+      <div className="tic-tac-toe-page">
+        <TicTacToeGame />
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default TicTacToeGame;
+export default TicTacToePage;
+

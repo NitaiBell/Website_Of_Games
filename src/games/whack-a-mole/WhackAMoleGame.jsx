@@ -17,8 +17,32 @@ const WhackAMoleGame = () => {
   const activeHoleRef = useRef(null);
 
   // ✅ Load sounds
-  const correctSound = new Audio("/assets/sounds/whack-a-mole/correct.mp3");
-  const wrongSound = new Audio("/assets/sounds/whack-a-mole/wronganswer.mp3");
+  const correctSound = useRef(new Audio("/assets/sounds/whack-a-mole/correct.mp3"));
+  const wrongSound = useRef(new Audio("/assets/sounds/whack-a-mole/wronganswer.mp3"));
+  const backgroundMusic = useRef(new Audio("/assets/sounds/whack-a-mole/background.mp3"));
+
+  // ✅ Configure Background Music
+  useEffect(() => {
+    backgroundMusic.current.loop = true;
+    backgroundMusic.current.volume = 0.2; // Adjust volume (0.0 - 1.0)
+  }, []);
+
+  useEffect(() => {
+    if (gameStarted) {
+      if (backgroundMusic.current.paused) {
+        backgroundMusic.current.play().catch(err => console.log("Music play error:", err));
+      }
+    } else {
+      backgroundMusic.current.pause();
+      backgroundMusic.current.currentTime = 0; // Reset when stopping
+    }
+
+    // ✅ Stop music when the component unmounts
+    return () => {
+      backgroundMusic.current.pause();
+      backgroundMusic.current.currentTime = 0;
+    };
+  }, [gameStarted]);
 
   useEffect(() => {
     if (gameStarted && currentRound < numRounds) {
@@ -29,12 +53,12 @@ const WhackAMoleGame = () => {
       const disappearTimer = setTimeout(() => {
         if (activeHoleRef.current !== null) {
           setMissed((prev) => prev + 1);
-          wrongSound.play(); // ❌ Play miss sound
+          wrongSound.current.play(); // ❌ Play miss sound
         }
         setActiveHole(null);
         activeHoleRef.current = null;
         setCurrentRound((prev) => prev + 1);
-      }, 700); // Mole stays for 1.2 sec
+      }, 700);
 
       return () => clearTimeout(disappearTimer);
     } else if (currentRound >= numRounds) {
@@ -47,9 +71,9 @@ const WhackAMoleGame = () => {
       setScore((prev) => prev + 1);
       setActiveHole(null);
       activeHoleRef.current = null;
-      correctSound.play(); // ✅ Play correct sound
+      correctSound.current.play(); // ✅ Play correct sound
     } else {
-      wrongSound.play(); // ❌ Play wrong sound
+      wrongSound.current.play(); // ❌ Play wrong sound
     }
   };
 
@@ -96,6 +120,8 @@ const WhackAMoleGame = () => {
 };
 
 export default WhackAMoleGame;
+
+
 
 
 
