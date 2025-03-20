@@ -21,3 +21,32 @@ social-network-app/        # Root directory of the project
 │── database.sql           # SQL file for initializing the database (optional)
 │── package.json           # Manages dependencies for the project
 │── README.md              # Project documentation (setup instructions, features)
+
+
+
+
+
+more simple one 
+
+
+simple-social-app/
+│── backend/               # Backend (Node.js + Express + PostgreSQL)
+│   ├── models/            # Database models
+│   │   ├── Post.js        # Defines the Post model (content, createdAt)
+│   ├── routes/            # API routes
+│   │   ├── posts.js       # Handles adding and fetching posts
+│   ├── config/            # Database configuration
+│   │   ├── database.js    # Sequelize connection to PostgreSQL
+│   ├── server.js          # Express server
+│   ├── .env               # Stores database credentials
+│── frontend/              # Frontend (Vite + React)
+│   ├── src/               # React source files
+│   │   ├── components/    # Reusable components
+│   │   │   ├── PostItem.jsx # Displays a single post
+│   │   ├── pages/         # App pages
+│   │   │   ├── Home.jsx   # Input field & submit button
+│   │   │   ├── Posts.jsx  # Displays all posts
+│   │   ├── App.jsx        # Main routing file
+│   │   ├── main.jsx       # Entry point
+│── package.json           # Dependencies
+│── README.md              # Project setup instructions
