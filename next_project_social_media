@@ -1,0 +1,23 @@
+social-network-app/        # Root directory of the project
+│── backend/               # Backend (Node.js + Express + PostgreSQL)
+│   ├── models/            # Folder for database models (Sequelize ORM)
+│   │   ├── User.js        # Defines the User model (username, email, password, profile image)
+│   │   ├── Post.js        # Defines the Post model (content, userId, createdAt)
+│   ├── routes/            # Folder for API routes
+│   │   ├── auth.js        # Handles user authentication (register, login)
+│   │   ├── posts.js       # Handles CRUD operations for posts
+│   ├── server.js          # Main backend file (sets up Express, connects to database)
+│── frontend/              # Frontend (Vite + React)
+│   ├── src/               # Source files for React
+│   │   ├── components/    # Folder for reusable UI components
+│   │   │   ├── Navbar.jsx # Navbar component (includes user profile image & login button)
+│   │   │   ├── Post.jsx   # Component to display individual posts
+│   │   ├── pages/         # Folder for different pages in the app
+│   │   │   ├── Home.jsx   # Displays all posts fetched from the backend
+│   │   │   ├── Login.jsx  # Login page (users sign in here)
+│   │   │   ├── Register.jsx # Registration page (users sign up with profile image)
+│   │   ├── App.jsx        # Main React component (handles routing)
+│   │   ├── main.jsx       # Entry point for React app (renders App.jsx)
+│── database.sql           # SQL file for initializing the database (optional)
+│── package.json           # Manages dependencies for the project
+│── README.md              # Project documentation (setup instructions, features)
